@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    padding: 40px;
+    border: 2px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* font-size: 75%; */
+
+}
+
+#tabs {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    gap: 20px;
+}
+
+.tiles {
+    background-color: lightblue;
+    padding: 0px;
+    border: 2px solid black;
+    margin: 20px;
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: auto-fit;
+
+}
+
+.sub-tile {
+    border: 2px solid black;
+    margin-bottom: 5px;
+    padding: 0;
+    float: right;
+    /* position: relative; */
+    top: 0;
+    right: 0;
+    font-size: larger;
+    font-weight: bold;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    border-top: none;
+    border-right: none;
+
+}
+#a {
+    background-color: lightcoral;
+}
+
+#b {
+    background-color: deeppink;
+    color: white;
+    /* padding: 1px; */
+}
+
+#c {
+    background-color: rgb(255, 239, 122);
+}
+
+
+
+.text {
+    clear: right;
+    padding: 10px;
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+    #tabs {
+        display:flex;
+        justify-content: space-between;
+    }
+    .tiles {
+        width: 33.33%;
+        text-align: center;
+    }
+
+}
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #tabs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #a1, #b1 {
+        grid-row: 1;
+        
+    }
+    #c1 {
+        grid-row: 2;
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    #tabs {
+        flex-direction: column;
+    }
+}
+
